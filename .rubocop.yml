@@ -3,4 +3,5 @@ AllCops:
   NewCops: enable
 
 inherit_gem:
-  foobara: .rubocop.yml
+  foobara:
+    - lint/rubocop/*
