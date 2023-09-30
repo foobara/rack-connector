@@ -7,6 +7,7 @@ PATH
   remote: .
   specs:
     rack-connector (0.1.0)
+      rack
 
 GEM
   remote: https://rubygems.org/
@@ -55,6 +56,10 @@ GEM
       byebug (~> 11.0)
       pry (>= 0.13, < 0.15)
     racc (1.7.1)
+    rack (3.0.8)
+    rackup (2.1.0)
+      rack (>= 3)
+      webrick (~> 1.8)
     rainbow (3.1.1)
     rake (13.0.6)
     rb-fsevent (0.11.2)
@@ -112,6 +117,7 @@ GEM
     simplecov_json_formatter (0.1.4)
     thor (1.2.2)
     unicode-display_width (2.4.2)
+    webrick (1.8.1)
 
 PLATFORMS
   x86_64-linux
@@ -122,6 +128,7 @@ DEPENDENCIES
   pry
   pry-byebug
   rack-connector!
+  rackup
   rake
   rspec
   rspec-its
