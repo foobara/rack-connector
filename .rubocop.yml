@@ -5,3 +5,10 @@ AllCops:
 inherit_gem:
   foobara:
     - lint/rubocop/*
+
+Naming/FileName:
+  inherit_mode:
+    merge:
+      - Exclude
+  Exclude:
+    - config.ru
