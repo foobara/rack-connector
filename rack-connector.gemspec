@@ -1,4 +1,4 @@
-require_relative "lib/rack/connector/version"
+require_relative "lib/foobara/rack_connector/version"
 
 Gem::Specification.new do |spec|
   spec.name = "rack-connector"
