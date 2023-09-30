@@ -1,5 +1,5 @@
 module Foobara
-  module Connectors
+  module CommandConnectors
     class Http < CommandConnector
       class Rack
         def call(env)

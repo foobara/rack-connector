@@ -4,4 +4,4 @@
 
 require "foobara/rack_connector"
 
-run Foobara::Connectors::Http::Rack.new
+run Foobara::CommandConnectors::Http::Rack.new

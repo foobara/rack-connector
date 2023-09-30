@@ -9,4 +9,4 @@ require "pry"
 #   [200, {}, ["Hello World"]]
 # end
 
-run Foobara::Connectors::Http::Rack.new
+run Foobara::CommandConnectors::Http::Rack.new
