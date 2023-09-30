@@ -2,12 +2,6 @@
 #   [200, {}, ["Hello World"]]
 # end
 
-class App
-  def call(env)
-    puts env
+require "foobara/rack_connector"
 
-    [200, {}, ["Hello World"]]
-  end
-end
-
-run App.new
+run Foobara::Connectors::Http::Rack.new

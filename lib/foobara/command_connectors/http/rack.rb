@@ -1,27 +1,34 @@
 module Foobara
   module Connectors
-    module Http
+    class Http < CommandConnector
       class Rack
-        attr_accessor :command_registry
-
-        def initialize
-          command_registry.new
-        end
-
-        def connect(command_class,
-                    inputs_transformer:,
-                    result_transformer:,
-                    errors_transformer:,
-                    allowed_rule:)
-
-          self.command_class = command_class
-          self.inputs_transformer = inputs_transformer
-          self.result_transformer = result_transformer
-          self.errors_transformer = errors_transformer
-          self.allowed_rule = allowed_rule
-        end
-
         def call(env)
+          # PATH_INFO has the path
+          # REQUEST_URI has whole uri
+          # QUERY_STRING has the query string
+          # REQUEST_METHOD is the request method
+          # rack.errors stream?
+          # rack.input stream?
+          # HTTP_ is all the headers
+
+          path = env["PATH_INFO"]
+          query_string = env["QUERY_STRING"]
+          method = env["REQUEST_METHOD"]
+          body = env["rack.input"].read
+          headers = env.select { |s| s.start_with?("HTTP_") }
+
+          request = Request.new(path, method, headers, query_string, body)
+
+          response = begin
+            route(request)
+          rescue => e
+            env["rack.errors"].puts e.to_s
+            env["rack.errors"].puts e.backtrace
+
+            Response.new(500, {}, "#{e}\n#{e.backtrace.inspect}")
+          end
+
+          [response.status, respone.headers, respone.body]
         end
       end
     end

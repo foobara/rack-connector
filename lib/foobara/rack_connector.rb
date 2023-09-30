@@ -1,8 +1,8 @@
 require "foobara/all"
 
-Util.require_directory(__dir__)
-
 module Foobara
+  Util.require_directory(__dir__)
+
   module RackConnector
   end
 end
