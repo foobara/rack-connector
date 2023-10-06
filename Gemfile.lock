@@ -1,5 +1,7 @@
-PATH
-  remote: ../foobara
+GIT
+  remote: foobara
+  revision: d5cb12d1802a01a021eb0e431f8286882cc68a25
+  branch: main
   specs:
     foobara (0.0.1)
 

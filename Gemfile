@@ -4,7 +4,7 @@ source "https://rubygems.org"
 gemspec
 
 # TODO: move this to gemspec
-gem "foobara", path: "../foobara"
+gem "foobara", git: "foobara", branch: "main"
 
 # Development dependencies go here
 gem "guard-rspec"
