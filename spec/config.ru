@@ -1,6 +1,7 @@
-# run do |env|
-#   [200, {}, ["Hello World"]]
-# end
+require "bundler/setup"
+
+require "irb"
+require "pry"
 
 require "foobara/rack_connector"
 
