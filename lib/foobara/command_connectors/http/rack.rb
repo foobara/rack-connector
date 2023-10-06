@@ -21,20 +21,15 @@ module Foobara
             request = run(path:, method:, headers:, query_string:, body:)
             response = request.response
             [response.status, response.headers, [response.body]]
-          rescue NoCommandFoundError => e
+          rescue NoCommandFoundError, InvalidContextError => e
             [404, {}, [e.message]]
-          rescue InvalidContextError => e
-            # should call the next app if we have one...
-            if @app
-              @app.call(env)
-            else
-              [404, {}, [e.message]]
-            end
           rescue => e
+            # :nocov:
             env["rack.errors"].puts e.to_s
             env["rack.errors"].puts e.backtrace
 
             raise e
+            # :nocov:
           end
         end
       end
