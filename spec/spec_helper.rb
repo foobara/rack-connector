@@ -3,7 +3,7 @@ require "bundler/setup"
 require "pry"
 require "pry-byebug"
 require "rspec/its"
-
+require "rack/test"
 require "simplecov"
 
 SimpleCov.start do
@@ -31,6 +31,6 @@ RSpec.configure do |config|
   # config.raise_errors_for_deprecations!
 end
 
-require "foobara/all"
+require "foobara/rack_connector"
 
 Foobara::Util.require_directory("#{__dir__}/../../foobara/spec/support")
