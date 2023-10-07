@@ -50,12 +50,12 @@ jobs:
             cd foobara
             ssh-agent sh -c 'echo "${{ secrets.FOOBARA_KEY }}" | ssh-add - &&
               git fetch --depth=1 origin $foobara_sha1 &&
-              if [ git rev-parse $foobara_branch ]; then
-                git checkout $foobara_branch
+              if git rev-parse --verify -q $foobara_branch; then
+                git checkout -q $foobara_branch
                 git reset --hard $foobara_sha1
               else
                 git branch $foobara_branch $foobara_sha1
-                git checkout $foobara_branch
+                git checkout -q $foobara_branch
               fi'
           else
             echo cloning
