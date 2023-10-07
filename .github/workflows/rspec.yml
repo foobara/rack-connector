@@ -11,14 +11,9 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     name: RSpec and Rubocop
-    strategy:
-      matrix:
-        ruby:
-          - '3.2.1' # TODO: automatically set this from .ruby-version
-
     steps:
       - uses: actions/checkout@v3
-      - id: foobara-sha1
+      - id: foobara-sha1-and-ruby-version
         run: |
           foobara_entry=`grep -A2 -m 1 '  remote: foobara$' Gemfile.lock`
           regex="revision: ([0-9a-f]+)\s+branch: ([-_[:alnum:]]+)$"
@@ -32,6 +27,8 @@ jobs:
           else
             echo "$foobara_entry doesn't match $regex" >&2
           fi
+          
+          echo ruby_version=`cat .ruby-version` >> "$GITHUB_ENV"
       - name: cache foobara
         id: cache-foobara
         uses: actions/cache@v3
@@ -75,7 +72,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: ${{ matrix.ruby }}
+          ruby-version: ${{ env.ruby_version }}
           bundler-cache: true
       - name: Run rspec
         run: bundle exec rspec
