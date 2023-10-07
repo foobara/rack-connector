@@ -13,7 +13,7 @@ jobs:
     name: RSpec and Rubocop
     steps:
       - uses: actions/checkout@v3
-      - id: foobara-sha1-and-ruby-version
+      - name: setup ruby version and foobara branch and sha1
         run: |
           foobara_entry=`grep -A2 -m 1 '  remote: foobara$' Gemfile.lock`
           regex="revision: ([0-9a-f]+)\s+branch: ([-_[:alnum:]]+)$"
