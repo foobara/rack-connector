@@ -2,7 +2,7 @@ module Foobara
   module CommandConnectors
     class Http < Foobara::CommandConnector
       class Rack < Http
-        class Context < Http::Context
+        class Request < Http::Request
           attr_accessor :env
 
           def initialize(env)

@@ -3,8 +3,7 @@ module Foobara
     class Http < Foobara::CommandConnector
       class Rack < Http
         def call(env)
-          request = run(env)
-          response = request.response
+          response = run(env)
           [response.status, response.headers, [response.body]]
         rescue NoCommandFoundError, InvalidContextError => e
           [404, {}, [e.message]]
