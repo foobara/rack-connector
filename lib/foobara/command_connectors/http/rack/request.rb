@@ -19,6 +19,7 @@ module Foobara
               path: env["PATH_INFO"],
               query_string: env["QUERY_STRING"],
               method: env["REQUEST_METHOD"],
+              # TODO: should we delay this read instead of eager-loading this?
               body: env["rack.input"].read,
               headers: env.select { |s| s.start_with?("HTTP_") },
             )

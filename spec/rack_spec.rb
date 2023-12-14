@@ -25,17 +25,7 @@ RSpec.describe Foobara::CommandConnectors::Http::Rack do
 
   context "when command exists" do
     let(:command_class) do
-      stub_class = ->(klass) { stub_const(klass.name, klass) }
-
-      Class.new(Foobara::Command) do
-        class << self
-          def name
-            "CalculateExponent"
-          end
-        end
-
-        stub_class.call(self)
-
+      stub_class "CalculateExponent", Foobara::Command do
         inputs type: :attributes,
                element_type_declarations: {
                  base: :integer,
