@@ -3,7 +3,7 @@ RSpec.describe Foobara::CommandConnectors::Http::Rack do
 
   let(:app) { command_connector }
   let(:command_connector) { described_class.new(default_serializers:) }
-  let(:default_serializers) { Foobara::CommandConnectors::JsonSerializer }
+  let(:default_serializers) { Foobara::CommandConnectors::Serializers::JsonSerializer }
 
   context "when no command" do
     it "is 404" do
