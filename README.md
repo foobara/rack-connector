@@ -8,6 +8,13 @@ interactive prompt.
 
 ## Installation
 
+From this directory, run the following:
+
+```
+bundle config set local.foobara ../foobara
+bundle config set disable_local_branch_check true
+```
+
 TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it
 to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with
 instructions to install your gem from git if you don't plan to release to RubyGems.org.
