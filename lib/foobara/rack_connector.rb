@@ -1,12 +1,8 @@
 require "foobara/all"
+require "foobara/command_connectors"
+require "foobara/command_connectors_http"
 
 module Foobara
-  module Monorepo
-    # Kind of awkward to not be able to just use require... or can we?
-    # project "command_connectors"
-    project "command_connectors_http"
-  end
-
   Util.require_directory(__dir__)
 
   module RackConnector
