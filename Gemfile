@@ -1,6 +1,6 @@
 source "https://rubygems.org"
+ruby File.read("#{__dir__}/.ruby-version")
 
-# Specify your gem's dependencies in commands.gemspec
 gemspec
 
 # TODO: move this to .gemspec
