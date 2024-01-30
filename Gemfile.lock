@@ -1,6 +1,6 @@
 GIT
   remote: foobara
-  revision: 94113ad4a0ce1ec2472f76f22ea8a2bca793ff22
+  revision: 7763000fed9adf94e46c2b715ce8a21ceeb5e5a3
   branch: main
   specs:
     foobara (0.0.1)
@@ -21,7 +21,7 @@ GIT
 
 GIT
   remote: https://github.com/foobara/util.git
-  revision: b20d1072622b502239b18fbc2e0e39cf50e169d4
+  revision: 3ca2ea3f6bc84e5b02a0af0259e60031a0aa48d1
   specs:
     foobara-util (0.1.0)
 
@@ -161,6 +161,9 @@ DEPENDENCIES
   rubocop-rake
   rubocop-rspec
   simplecov
+
+RUBY VERSION
+   ruby 3.2.2p53
 
 BUNDLED WITH
    2.4.14
