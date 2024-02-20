@@ -1,6 +1,6 @@
 GIT
   remote: foobara
-  revision: b9299be2d490a4f45f6fd7a76bff5f4849149ffb
+  revision: 692971ed7f8b3aad4071c8933e721088a786f248
   branch: main
   specs:
     foobara (0.0.1)
@@ -28,7 +28,7 @@ GIT
 PATH
   remote: .
   specs:
-    rack-connector (0.1.0)
+    foobara-rack-connector (0.1.0)
       rack
 
 GEM
@@ -146,13 +146,13 @@ PLATFORMS
 
 DEPENDENCIES
   foobara!
+  foobara-rack-connector!
   foobara-rubocop-rules!
   foobara-spec-helpers!
   foobara-util!
   guard-rspec
   pry
   pry-byebug
-  rack-connector!
   rack-test
   rackup
   rake

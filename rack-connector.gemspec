@@ -1,7 +1,7 @@
 require_relative "lib/foobara/rack_connector/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "rack-connector"
+  spec.name = "foobara-rack-connector"
   spec.version = Rack::Connector::Version::VERSION
   spec.authors = ["Miles Georgi"]
   spec.email = ["azimux@gmail.com"]
