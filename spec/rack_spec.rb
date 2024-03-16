@@ -12,6 +12,28 @@ RSpec.describe Foobara::CommandConnectors::Http::Rack do
       expect(last_response.status).to be(404)
       expect(last_response.body).to include("Could not find command registered for CalculateExponent")
     end
+
+    describe "/manifest" do
+      it "gives a manifest with no commands or types" do
+        get "/manifest"
+
+        expect(last_response.status).to be(200)
+        manifest = JSON.parse(last_response.body)
+
+        expect(manifest.keys).to match_array(
+          %w[
+            organization
+            domain
+            type
+            command
+            error
+            processor
+            processor_class
+          ]
+        )
+        expect(manifest["type"]).to eq({})
+      end
+    end
   end
 
   context "when invalid context" do
