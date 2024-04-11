@@ -29,6 +29,7 @@ RSpec.describe Foobara::CommandConnectors::Http::Rack do
             error
             processor
             processor_class
+            metadata
           ]
         )
         expect(manifest["type"]).to eq({})
