@@ -5,7 +5,7 @@ module Foobara
         def call(env)
           response = run(env)
           [response.status, response.headers, [response.body]]
-        rescue NoCommandFoundError, InvalidContextError => e
+        rescue NotFoundError, InvalidContextError => e
           [404, {}, [e.message]]
         rescue => e
           # :nocov:

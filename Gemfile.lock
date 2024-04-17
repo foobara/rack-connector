@@ -1,6 +1,6 @@
 GIT
   remote: foobara
-  revision: b0896cff5bbee789d7957d1a99c57f86364e5a99
+  revision: 6272335abdf7911fa93accd5279d273ebea74d43
   branch: main
   specs:
     foobara (0.0.1)
@@ -106,7 +106,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
     rspec-support (3.12.1)
-    rubocop (1.63.1)
+    rubocop (1.63.2)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
@@ -130,7 +130,7 @@ GEM
       rubocop-capybara (~> 2.17)
       rubocop-factory_bot (~> 2.22)
       rubocop-rspec_rails (~> 2.28)
-    rubocop-rspec_rails (2.28.2)
+    rubocop-rspec_rails (2.28.3)
       rubocop (~> 1.40)
     ruby-progressbar (1.13.0)
     shellany (0.0.1)
