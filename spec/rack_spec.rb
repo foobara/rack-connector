@@ -69,7 +69,7 @@ RSpec.describe Foobara::CommandConnectors::Http::Rack do
     end
 
     it "is 200" do
-      get "/run/CalculateExponent?base=2&exponent=3"
+      get "/run/CalculateExponent?base=2&exponent=3", nil, { "HTTP_X_FORWARDED_PROTO" => "https" }
 
       expect(last_response.status).to be(200)
       expect(last_response.body).to eq("8")

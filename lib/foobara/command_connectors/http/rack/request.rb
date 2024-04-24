@@ -8,8 +8,14 @@ module Foobara
           def initialize(env)
             self.env = env
 
+            scheme = if env["HTTP_X_FORWARDED_PROTO"] == "https" || env["HTTPS"] == "on"
+                       "https"
+                     else
+                       "http"
+                     end
+
             super(
-              scheme: env["rack.url_scheme"],
+              scheme:,
               host: env["SERVER_NAME"],
               port: env["SERVER_PORT"],
               path: env["PATH_INFO"],

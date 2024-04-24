@@ -1,6 +1,6 @@
 GIT
   remote: foobara
-  revision: 6272335abdf7911fa93accd5279d273ebea74d43
+  revision: 4321c4c70abf92d4d690ae086e0b3c5df4499c9b
   branch: main
   specs:
     foobara (0.0.1)
@@ -21,7 +21,7 @@ GIT
 
 GIT
   remote: https://github.com/foobara/util.git
-  revision: 659d4e4fd5dd74ca005650fc4bcc2ac1ee7809ec
+  revision: 3773dcb765bc70dea2b14cfe179ed3849d5126c2
   specs:
     foobara-util (0.1.0)
 
@@ -106,7 +106,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
     rspec-support (3.12.1)
-    rubocop (1.63.2)
+    rubocop (1.63.3)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
