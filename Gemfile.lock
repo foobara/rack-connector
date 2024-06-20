@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    foobara-rack-connector (0.1.0)
+    foobara-rack-connector (0.0.1)
       foobara
       foobara-util
       rack

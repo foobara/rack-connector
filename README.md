@@ -48,9 +48,5 @@ the [code of conduct](https://github.com/[USERNAME]/rack-connector/blob/main/COD
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Rack::Connector project's codebases, issue trackers, chat rooms and mailing lists is
-expected to follow the [code of conduct](https://github.com/[USERNAME]/rack-connector/blob/main/CODE_OF_CONDUCT.md).
+This project is licensed under your choice of the Apache-2.0 license or the MIT license.
+See [LICENSE.txt](LICENSE.txt) for more info about licensing.
