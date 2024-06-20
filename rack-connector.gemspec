@@ -12,8 +12,6 @@ Gem::Specification.new do |spec|
   spec.license = "none yet"
   spec.required_ruby_version = ">= #{File.read("#{__dir__}/.ruby-version")}"
 
-  # spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
-
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
   spec.metadata["changelog_uri"] = "#{spec.homepage}/CHANGELOG.md"
@@ -35,6 +33,7 @@ Gem::Specification.new do |spec|
   # guide at: https://bundler.io/guides/creating_gem.html
   spec.metadata["rubygems_mfa_required"] = "true"
 
-  # Uncomment to register a new dependency of your gem
+  spec.add_dependency "foobara"
+  spec.add_dependency "foobara-util"
   spec.add_dependency "rack"
 end
