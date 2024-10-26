@@ -1,6 +1,6 @@
 require "foobara/all"
 require "foobara/command_connectors"
-require "foobara/command_connectors_http"
+require "foobara/http_command_connector"
 
 module Foobara
   Util.require_directory(__dir__)

@@ -28,6 +28,7 @@ Gem::Specification.new do |spec|
   spec.metadata["rubygems_mfa_required"] = "true"
 
   spec.add_dependency "foobara"
+  spec.add_dependency "foobara-http-command-connector"
   spec.add_dependency "foobara-util"
   spec.add_dependency "rack"
 end
