@@ -1,5 +1,4 @@
 require "foobara/all"
-require "foobara/command_connectors"
 require "foobara/http_command_connector"
 
 module Foobara
