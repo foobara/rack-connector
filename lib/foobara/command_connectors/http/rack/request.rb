@@ -5,7 +5,7 @@ module Foobara
         class Request < Http::Request
           attr_accessor :env
 
-          def initialize(env)
+          def initialize(env, prefix: nil)
             self.env = env
 
             scheme = if env["HTTP_X_FORWARDED_PROTO"] == "https" || env["HTTPS"] == "on"
@@ -25,7 +25,8 @@ module Foobara
               body: env["rack.input"]&.read || "",
               headers: env.select { |s| s.start_with?("HTTP_") },
               cookies: env["HTTP_COOKIE"],
-              remote_ip: env["REMOTE_ADDR"]
+              remote_ip: env["REMOTE_ADDR"],
+              prefix:
             )
           end
         end
