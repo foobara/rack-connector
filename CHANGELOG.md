@@ -1,3 +1,7 @@
+## [0.0.4] - 2025-01-07
+
+- Bump Ruby to 3.4.1
+
 ## [0.0.3] - 2024-10-30
 
 - Support path prefixes

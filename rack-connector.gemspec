@@ -2,7 +2,7 @@ require_relative "version"
 
 Gem::Specification.new do |spec|
   spec.name = "foobara-rack-connector"
-  spec.version = Rack::Connector::Version::VERSION
+  spec.version = Foobara::RackConnector::Version::VERSION
   spec.authors = ["Miles Georgi"]
   spec.email = ["azimux@gmail.com"]
 
@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.description = spec.summary
   spec.homepage = "https://github.com/foobara/rack-connector"
   spec.license = "none yet"
-  spec.required_ruby_version = ">= #{File.read("#{__dir__}/.ruby-version")}"
+  spec.required_ruby_version = Foobara::RackConnector::Version::MINIMUM_RUBY_VERSION
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
