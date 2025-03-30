@@ -24,7 +24,7 @@ module Foobara
               # TODO: should we delay this read instead of eager-loading this?
               body: env["rack.input"]&.read || "",
               headers: env.select { |s| s.start_with?("HTTP_") },
-              cookies: env["HTTP_COOKIE"],
+              cookies: ::Rack::Utils.parse_cookies(env),
               remote_ip: env["REMOTE_ADDR"],
               prefix:
             )

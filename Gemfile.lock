@@ -26,11 +26,11 @@ GEM
     ffi (1.17.1-x86_64-darwin)
     ffi (1.17.1-x86_64-linux-gnu)
     ffi (1.17.1-x86_64-linux-musl)
-    foobara (0.0.88)
+    foobara (0.0.90)
       bigdecimal
       foobara-lru-cache (~> 0.0.2)
       foobara-util (~> 0.0.11)
-    foobara-http-command-connector (0.0.15)
+    foobara-http-command-connector (0.0.17)
       foobara (~> 0.0.88)
     foobara-lru-cache (0.0.2)
     foobara-rubocop-rules (0.0.8)
@@ -157,8 +157,8 @@ PLATFORMS
 
 DEPENDENCIES
   foobara-rack-connector!
-  foobara-rubocop-rules
-  foobara-spec-helpers
+  foobara-rubocop-rules (~> 0.0.1)
+  foobara-spec-helpers (~> 0.0.1)
   guard-rspec
   pry
   pry-byebug

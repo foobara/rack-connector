@@ -1,3 +1,7 @@
+## [0.0.5] - 2025-03-29
+
+- Store cookies on request as a hash
+
 ## [0.0.4] - 2025-01-07
 
 - Bump Ruby to 3.4.1

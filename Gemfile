@@ -9,8 +9,8 @@ gemspec
 # gem "foobara-http-command-connector", path: "../http-command-connector"
 
 # Development dependencies go here
-gem "foobara-rubocop-rules"
-gem "foobara-spec-helpers"
+gem "foobara-rubocop-rules", "~> 0.0.1"
+gem "foobara-spec-helpers", "~> 0.0.1"
 gem "guard-rspec"
 gem "pry"
 gem "pry-byebug"
