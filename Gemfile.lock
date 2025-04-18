@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    foobara-rack-connector (0.0.9)
+    foobara-rack-connector (0.0.10)
       foobara (~> 0.0.88)
       foobara-http-command-connector (~> 0.0.1)
       rack
@@ -27,7 +27,7 @@ GEM
     ffi (1.17.2-x86_64-darwin)
     ffi (1.17.2-x86_64-linux-gnu)
     ffi (1.17.2-x86_64-linux-musl)
-    foobara (0.0.103)
+    foobara (0.0.104)
       bigdecimal
       foobara-lru-cache (~> 0.0.2)
       foobara-util (~> 0.0.11)
@@ -144,7 +144,7 @@ GEM
     rubocop-rake (0.7.1)
       lint_roller (~> 1.1)
       rubocop (>= 1.72.1)
-    rubocop-rspec (3.5.0)
+    rubocop-rspec (3.6.0)
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
     ruby-progressbar (1.13.0)

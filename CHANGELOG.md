@@ -1,3 +1,7 @@
+## [0.0.10] - 2025-04-18
+
+- Pass options through to Puma
+
 ## [0.0.9] - 2025-04-17
 
 - Make sure Rack is always loaded
