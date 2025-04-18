@@ -1,3 +1,5 @@
+require "rack"
+
 require "foobara/all"
 require "foobara/http_command_connector"
 

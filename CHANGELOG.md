@@ -1,3 +1,7 @@
+## [0.0.9] - 2025-04-17
+
+- Make sure Rack is always loaded
+
 ## [0.0.8] - 2025-04-17
 
 - Add a #run_puma convenience method for demos
