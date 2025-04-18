@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    foobara-rack-connector (0.0.6)
+    foobara-rack-connector (0.0.7)
       foobara (~> 0.0.88)
       foobara-http-command-connector (~> 0.0.1)
       rack
@@ -26,7 +26,7 @@ GEM
     ffi (1.17.2-x86_64-darwin)
     ffi (1.17.2-x86_64-linux-gnu)
     ffi (1.17.2-x86_64-linux-musl)
-    foobara (0.0.102)
+    foobara (0.0.103)
       bigdecimal
       foobara-lru-cache (~> 0.0.2)
       foobara-util (~> 0.0.11)
