@@ -1,3 +1,11 @@
+## [0.0.8] - 2025-04-17
+
+- Add a #run_puma convenience method for demos
+
+## [0.0.6] - 2025-04-15
+
+- Make headers a standard downcased form for now instead of mixed-casing
+
 ## [0.0.5] - 2025-03-29
 
 - Store cookies on request as a hash
