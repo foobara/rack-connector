@@ -18,7 +18,9 @@ gem "foobara-rack-connector"
 
 ## Usage
 ```ruby
-command_connector = Foobara::CommandConnectors::Http::Rack.new                      command_connector.connect(Add)                                  Rackup::Server.start(app: command_connector)
+command_connector = Foobara::CommandConnectors::Http::Rack.new
+command_connector.connect(Add) # Your Foobara::Command should goes here
+Rackup::Server.start(app: command_connector)
 ```
 ## Example
 ```ruby
@@ -47,6 +49,7 @@ end
 command_connector = Foobara::CommandConnectors::Http::Rack.new
 
 command_connector.connect(Add)
+
 Rackup::Server.start(app: command_connector)
 ```
 
