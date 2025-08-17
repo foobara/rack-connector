@@ -22,6 +22,7 @@ RSpec.describe Foobara::CommandConnectors::Http::Rack do
 
         expect(manifest.keys).to contain_exactly("organization", "domain", "type", "command", "error", "processor",
                                                  "processor_class", "metadata")
+
         expect(manifest["type"]).to eq({})
       end
     end
