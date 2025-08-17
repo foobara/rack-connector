@@ -1,3 +1,7 @@
+## [0.1.0] - 2025-08-22
+
+- Support Foobara 0.1.0
+
 ## [0.0.10] - 2025-04-18
 
 - Pass options through to Puma

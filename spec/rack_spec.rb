@@ -20,18 +20,9 @@ RSpec.describe Foobara::CommandConnectors::Http::Rack do
         expect(last_response.status).to be(200)
         manifest = JSON.parse(last_response.body)
 
-        expect(manifest.keys).to match_array(
-          %w[
-            organization
-            domain
-            type
-            command
-            error
-            processor
-            processor_class
-            metadata
-          ]
-        )
+        expect(manifest.keys).to contain_exactly("organization", "domain", "type", "command", "error", "processor",
+                                                 "processor_class", "metadata")
+
         expect(manifest["type"]).to eq({})
       end
     end
@@ -54,12 +45,12 @@ RSpec.describe Foobara::CommandConnectors::Http::Rack do
                  base: :integer,
                  exponent: :integer
                },
-               required: %i[base exponent]
+               required: [:base, :exponent]
 
         result :integer
 
         def execute
-          base**exponent
+          base ** exponent
         end
       end
     end
