@@ -15,12 +15,12 @@ class CalculateExponent < Foobara::Command
            base: :integer,
            exponent: :integer
          },
-         required: %i[base exponent]
+         required: [:base, :exponent]
 
   result :integer
 
   def execute
-    base**exponent
+    base ** exponent
   end
 end
 
