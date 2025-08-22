@@ -5,8 +5,8 @@ ruby Foobara::RackConnector::Version::MINIMUM_RUBY_VERSION
 
 gemspec
 
-gem "foobara", path: "../foobara"
-gem "foobara-http-command-connector", path: "../http-command-connector"
+# gem "foobara", path: "../foobara"
+# gem "foobara-http-command-connector", path: "../http-command-connector"
 
 group :development do
   gem "foobara-rubocop-rules", ">= 1.0.0"
