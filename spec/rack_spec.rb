@@ -20,8 +20,9 @@ RSpec.describe Foobara::CommandConnectors::Http::Rack do
         expect(last_response.status).to be(200)
         manifest = JSON.parse(last_response.body)
 
-        expect(manifest.keys).to contain_exactly("organization", "domain", "type", "command", "error", "processor",
-                                                 "processor_class", "metadata")
+        expect(manifest.keys).to contain_exactly(
+          "organization", "domain", "type", "command", "error", "metadata"
+        )
 
         expect(manifest["type"]).to eq({})
       end

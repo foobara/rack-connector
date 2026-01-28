@@ -1,3 +1,7 @@
+## [0.1.1] - 2026-01-27
+
+- Make sure set-cookie header is set when cookies are added
+
 ## [0.1.0] - 2025-08-22
 
 - Support Foobara 0.1.0
