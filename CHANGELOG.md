@@ -1,3 +1,7 @@
+## [0.1.2] - 2026-05-02
+
+- Don't use an array for the set-cookie header unless there's multiple cookies
+
 ## [0.1.1] - 2026-01-27
 
 - Make sure set-cookie header is set when cookies are added

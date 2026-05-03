@@ -17,14 +17,22 @@ module Foobara
 
           def update_set_cookie_header
             if cookies && !cookies.empty?
-              cookie_strings = cookies.map do |cookie|
-                ::Rack::Utils.set_cookie_header(
+              cookies_string = nil
+
+              cookies.each do |cookie|
+                cookie_string = ::Rack::Utils.set_cookie_header(
                   cookie.name,
                   cookie.opts.merge(value: cookie.value)
                 )
+
+                cookies_string = if cookies_string
+                                   [*cookies_string, cookie_string]
+                                 else
+                                   cookie_string
+                                 end
               end
 
-              add_header("set-cookie", cookie_strings)
+              add_header("set-cookie", cookies_string)
             end
           end
         end
