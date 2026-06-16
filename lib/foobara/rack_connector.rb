@@ -1,4 +1,5 @@
 require "rack"
+require "cgi"
 
 require "foobara/all"
 require "foobara/http_command_connector"
