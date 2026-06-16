@@ -1,3 +1,7 @@
+## [0.1.3] - 2026-06-16
+
+- Add cgi gem as a dependency to support Ruby 4
+
 ## [0.1.2] - 2026-05-02
 
 - Don't use an array for the set-cookie header unless there's multiple cookies
