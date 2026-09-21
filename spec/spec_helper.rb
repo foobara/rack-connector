@@ -5,6 +5,7 @@ require "pry-byebug"
 require "rspec/its"
 require "rack/test"
 require "simplecov"
+Warning[:deprecated] = true
 
 SimpleCov.start do
   # enable_coverage :branch
