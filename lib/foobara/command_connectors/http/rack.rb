@@ -8,12 +8,12 @@ module Foobara
         rescue NotFoundError, InvalidContextError => e
           [404, {}, [e.message]]
         rescue => e
-          # :nocov:
+          # simplecov:disable
           env["rack.errors"].puts e.to_s
           env["rack.errors"].puts e.backtrace
 
           raise e
-          # :nocov:
+          # simplecov:enable
         end
       end
     end
